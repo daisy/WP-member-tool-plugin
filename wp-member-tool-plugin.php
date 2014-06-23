@@ -74,6 +74,36 @@ class WPMemberToolPlugin {
 		);
 		register_post_type( 'member_tool', $args );
 
+		$labels = array(
+			'name' => _x( 'Tool Categories', 'tool_categories' ),
+			'singular_name' => _x( 'Tool Category', 'tool_categories' ),
+			'search_items' => _x( 'Search Tool Categories', 'tool_categories' ),
+			'popular_items' => _x( 'Popular Tool Categories', 'tool_categories' ),
+			'all_items' => _x( 'All Tool Categories', 'tool_categories' ),
+			'parent_item' => _x( 'Parent Tool Category', 'tool_categories' ),
+			'parent_item_colon' => _x( 'Parent Tool Category:', 'tool_categories' ),
+			'edit_item' => _x( 'Edit Tool Category', 'tool_categories' ),
+			'update_item' => _x( 'Update Tool Category', 'tool_categories' ),
+			'add_new_item' => _x( 'Add New Tool Category', 'tool_categories' ),
+			'new_item_name' => _x( 'New Tool Category', 'tool_categories' ),
+			'separate_items_with_commas' => _x( 'Separate tool categories with commas', 'tool_categories' ),
+			'add_or_remove_items' => _x( 'Add or remove Tool Categories', 'tool_categories' ),
+			'choose_from_most_used' => _x( 'Choose from most used Tool Categories', 'tool_categories' ),
+			'menu_name' => _x( 'Tool Categories', 'tool_categories' ),
+		);
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'show_in_nav_menus' => true,
+			'show_ui' => true,
+			'show_tagcloud' => true,
+			'show_admin_column' => false,
+			'hierarchical' => false,
+			'rewrite' => true,
+			'query_var' => true
+		);
+		register_taxonomy( 'tool_categories', array('member_tool'), $args );
+
 	}
 
 
