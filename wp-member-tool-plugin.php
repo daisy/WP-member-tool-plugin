@@ -53,7 +53,7 @@ class WPMemberToolPlugin {
 			'not_found' => _x( 'No Member Tool found', 'member_tool' ),
 			'not_found_in_trash' => _x( 'No Member Tool found in Trash', 'member_tool' ),
 			'parent_item_colon' => _x( 'Parent Member Tool:', 'member_tool' ),
-			'menu_name' => _x( 'Members', 'member_tool' ),
+			'menu_name' => _x( 'Tools & Services', 'member_tool' ),
 		);
 		$args = array(
 			'labels' => $labels,
